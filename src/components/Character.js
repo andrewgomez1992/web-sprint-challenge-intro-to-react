@@ -1,7 +1,7 @@
 // Write your Character component here
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import styled from 'styled-components'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styled from 'styled-components';
 
 const Styles = styled.h2`
     
@@ -23,7 +23,7 @@ div {
 }
 
 div:hover {
-  background: white;
+  background: black;
   color: black;
 }
 
@@ -51,10 +51,10 @@ export default function Character() {
     useEffect(() => {
         axios.get('https://swapi.dev/api/people/')
         .then(res => { 
-            console.log(res.data)
-          setCharacters(res.data)
+            console.log(res.data);
+          setCharacters(res.data);
         })
-        .catch(err => console.log(err))
+        .catch(err => console.log(err));
     }, [])
 
     return (
@@ -67,4 +67,4 @@ export default function Character() {
         ))} 
       </Styles>
     )
-  }
+  };
